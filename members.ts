@@ -36,5 +36,13 @@ export const members: Member[] = [
     githubUsername: "thara0402",
     twitterUsername: "TonyTonyKun",
     excludeUrlRegex: "personal",
+  },
+  {
+    id: "ns_app",
+    name: "スマホ&TV",
+    bio: "スマートフォン&TVアプリチームのブログです。",
+    avatarSrc: "/avatars/app1.jpg",
+    sources: ["https://qiita.com/NEXTSCAPE_App_T/feed"],
+    websiteUrl: "https://qiita.com/NEXTSCAPE_App_T",
   }
 ];
