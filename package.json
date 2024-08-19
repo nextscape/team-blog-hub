@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
     "build": "run-s build:posts build:next",
     "build:posts": "ts-node --project tsconfig.builder.json ./src/builder/posts.ts",
-    "build:next": "next build && next export",
-    "start": "next start"
+    "build:next": "set NODE_OPTIONS=--openssl-legacy-provider && next build && next export",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && next start"
   },
   "dependencies": {
     "dayjs": "^1.9.3",
