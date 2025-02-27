@@ -1,0 +1,28 @@
+name: Keepalive Workflow
+
+on:
+  schedule:
+    # 毎月の1日と15日の14時（JST）にスケジュール実行
+    - cron: '0 5 1,15 * *'
+  workflow_dispatch:
+
+concurrency:
+  group: keepalive
+  cancel-in-progress: false
+
+jobs:
+
+  keepalive:
+    permissions:
+      actions: write
+    runs-on: ubuntu-latest
+    steps:
+      # ワークフローが自動的に（60日間で）無効になるのを防ぐため、定期的に有効化にする
+      # 既に有効の場合でも、無効になるまでの期限が延長される
+      - name: Re-enable workflow
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh workflow enable keepalive.yml
+          gh workflow enable azure-static-web-apps-mango-tree-0f24e2f00_TimerTrigger.yml
