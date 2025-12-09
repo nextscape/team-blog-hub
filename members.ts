@@ -19,12 +19,12 @@ export const members: Member[] = [
     websiteUrl: "https://withmr.nextscape.net/blog",
   },
   {
-    id: "ns_st",
-    name: "Streaming Tech Blog",
-    bio: "動画配信の基礎から最新情報までお届けするブログです。",
-    avatarSrc: "/avatars/streaming.png",
-    sources: ["https://media-streaming.nextscape.net/feed"],
-    websiteUrl: "https://media-streaming.nextscape.net",
+    id: "ns_mdk",
+    name: "Multi DRM Kit Blog",
+    bio: "DRMや動画配信について基礎から最新情報までお届けするブログです。",
+    avatarSrc: "/avatars/mdk.png",
+    sources: ["https://www.multidrmkit.net/feed"],
+    websiteUrl: "https://www.multidrmkit.net",
   },
   {
     id: "ns_thara",
