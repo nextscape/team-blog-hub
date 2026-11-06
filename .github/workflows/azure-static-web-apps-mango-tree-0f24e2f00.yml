@@ -29,6 +29,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build site
         run: yarn build
+      - name: Include Static Web Apps configuration
+        run: cp staticwebapp.config.json out/staticwebapp.config.json
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
